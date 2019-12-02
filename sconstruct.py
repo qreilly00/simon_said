@@ -1,0 +1,1 @@
+Program(target = 'bin/app', source = ['src/main.cpp', Glob('src/difficulty/*.cpp'), Glob('src/button/*.cpp'), Glob('src/simon/*.cpp')], CCFLAGS = '-Ilib/SFML-2.5.1/include', LIBS = ['sfml-window', 'sfml-graphics', 'sfml-system'], LIBPATH = ['lib/SFML-2.5.1/lib'])

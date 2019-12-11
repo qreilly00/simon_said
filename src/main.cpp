@@ -30,6 +30,9 @@ int main(int argc, char *argv[]) {
 	exit = out[0];
 	difficulty = out[1];
 
+	s1.generateResponse(difficulty);
+	//std::vector<sf::Color> response = s1.returnResponse();
+
 	sf::RenderWindow w(sf::VideoMode(900, 800), "Simon Said");
 	sf::Event e;
 
@@ -57,7 +60,7 @@ std::vector<int> checkInput(std::string argv1, int argc) {
 
 	std::vector<int> out(2);
 	bool exit = 0;
-	int difficulty = 0;
+	int difficulty = -1;
 
 	if(argc == 1) {
 		std::cout << "Please pass the desired Difficulty. The options are: " << std::endl;
@@ -72,7 +75,7 @@ std::vector<int> checkInput(std::string argv1, int argc) {
 			}
 		}
 
-		if(difficulty == 0) {
+		if(difficulty == -1) {
 			incorrectInput(argv1);
 			exit = 1;
 		} else {

@@ -8,7 +8,11 @@ private:
 
 	sf::CircleShape shape;
 	sf::Color shapeColor;
-	std::vector<std::string> shapeResponse;
+	std::vector<sf::Color> availableColors;
+	std::vector<sf::Color> shapeResponse;
+
+	int medFrequency;
+	int medCount;
 
 public:
 
@@ -17,10 +21,10 @@ public:
 	sf::CircleShape returnShape();
 	sf::Color returnColor();
 	sf::Vector2f returnPosition();
-	std::vector<std::string> returnResponse();
 	float returnRadius();
 
 	void generateResponse(int difficulty);
+	std::vector<sf::Color> returnResponse();
 
 	void setPosition(sf::Vector2f in);
 

@@ -26,7 +26,10 @@ public:
 	void generateResponse(int difficulty);
 	std::vector<sf::Color> returnResponse();
 
+	std::vector<sf::Color> returnAvailableColors();
+
 	void setPosition(sf::Vector2f in);
+	void setColor(sf::Color in);
 
 };
 

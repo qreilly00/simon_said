@@ -21,6 +21,7 @@ public:
 	float returnRadius();
 
 	void setPosition(sf::Vector2f in);
+	void setColor(sf::Color in);
 
 };
 
